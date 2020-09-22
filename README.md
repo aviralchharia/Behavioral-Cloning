@@ -1,4 +1,4 @@
-# behavioural-Cloning
+# Behavioural-Cloning
 
 This project aims to develop a self-driving car implementing NVIDIA's End-to-End Deep Learning Model. The images captured (during the training phase) by the three cameras mounted on the car will represent our training dataset and the label for each specific image will be the steering angle of the car at that specific instance. This will be then feed to the Convolutional Neural Network which will then learn how to drive the car autonomously by learning from the behaviour of a manual driver. How well the neural network drives the car depends on how well the car has been driven manually while the data is being collected. The car is tested on an environment completely different from the training environment. The car clones the behaviour of the manual drivers. This technique itself is very complex and involves complicated deep learning as well as image manipulation techniques and presently used in the development of self-driving cars. Here we use the open-source vehicular simulation software (Courtesy: Udacity) built in Unity. Other simulators like AirSim (by Microsoft) may be used.
 
