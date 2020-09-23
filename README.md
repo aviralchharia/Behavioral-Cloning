@@ -1,4 +1,4 @@
-# Behavioural-Cloning
+# Behavioural Cloning
 
 This project aims to develop a self-driving car implementing NVIDIA's End-to-End Deep Learning Model. The images captured (during the training phase) by the three cameras mounted on the car will represent our training dataset and the label for each specific image will be the steering angle of the car at that specific instance. This will be then feed to the Convolutional Neural Network which will then learn how to drive the car autonomously by learning from the behaviour of a manual driver. How well the neural network drives the car depends on how well the car has been driven manually while the data is being collected. The car is tested on an environment completely different from the training environment. The car clones the behaviour of the manual drivers. This technique itself is very complex and involves complicated deep learning as well as image manipulation techniques and presently used in the development of self-driving cars. Here we use the open-source vehicular simulation software (Courtesy: Udacity) built in Unity. Other simulators like AirSim (by Microsoft) may be used.
 
@@ -24,6 +24,25 @@ The Architecture of the Convolutional Neural Network is as given below.
     <img width="500" height="650" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/CNN%20Architecture.JPG?raw=true'
 </p>
 
+## Training the End-to-End Model
+
+The following figure shows the block diagram of the training system. Images are fed into a CNN which then computes a proposed steering command. The proposed command is compared to the desired command for that image and the weights of the CNN are adjusted to bring the CNN output closer to the desired output.
+
+<p align="center">
+    <img width="750" height="350" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Neural%20Network%20Model.JPG?raw=true'
+</p>
+   
+Once trained, the network can generate steering from the video images of a single center camera.
+
+<p align="center">
+    <img width="650" height="175" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Model.JPG?raw=true'
+</p>
+
+## The Drive Simulator
+
+<p align="center">
+    <img width="700" height="300" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Block%20Diagram%20of%20Drive%20Simulator.JPG?raw=true'
+</p>
 
 ## Limitations
 
