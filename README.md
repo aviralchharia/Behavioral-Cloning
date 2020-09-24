@@ -15,6 +15,12 @@ The car is equipped with three cameras- one mounted on the left, one on the midd
    |       > 0      |    Right Turn   |
    |       < 0      |    Left Turn    |
    
+Data Visualization via plotting a Histogram between Frequency of Occurance vs Steering Angles id done & the data is balanced to get a more generalised dataset. The Images are then Augmented, adding Zoom, Pan, altering the brightness, Flipping Steering Angles. Further Gaussian Blur is added, RGB2YUV conversion is done & data-normalization is also carried out.
+
+<p align="center">
+    <img width="1000" height="250" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Preprocessed%20Image.png?raw=true'
+</p>
+
 
 ## The CNN Architecture 
 
@@ -38,14 +44,22 @@ Once trained, the network can generate steering from the video images of a singl
     <img width="650" height="175" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Model.JPG?raw=true'
 </p>
 
-## The Drive Simulator
+## Results
+
+The end-to-end NVIDIA deep learning model for the self-driving car performed very well in autonomous mode on the simulator.
 
 <p align="center">
     <img width="700" height="300" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Block%20Diagram%20of%20Drive%20Simulator.JPG?raw=true'
 </p>
+ 
+The Training & Validation Loss curves obtained is as follows.
 
-## Limitations
+<p align="center">
+    <img width="450" height="300" src = 'https://github.com/aviralchharia/Behavioral-Cloning/blob/master/Training%20&%20Validation%20Loss%20Curves.png?raw=true'
+</p>   
+   
+## Limitations of the Approach
 
-1. We train the model on centred lane driving (to ensure balanced dataset) whereas in real life, the car will be either on the left lane or the right lane. 
-2. We need to train and gather more data on sharp edges by re-recording specific turns to help our model learn better on how to take sharp turns, etc. 
-3. We make use of the steering angle in our model. Bigger models with higher accuracy may also use throttle & break in addition to the steering angles.
+1. We train the model on centred lane driving (to ensure balanced dataset) whereas in real life, the car will be either on the left lane or the right lane which would increase the complexity and requistive changes in training data and model may be required.
+2. We need to train and gather more data on sharp edges by re-recording specific turns to help our model learn better on how to take sharp turns, etc. Many additions in the Model will be required to develop a fully-autonomous vehicle capable of running on the road which would inlude Traffic Signs detection, Autonomous Lane Change Assistance Systems, Safety Systems, Traffic Assistance Systems, etc.
+3. We make use of the steering angle in our model. Models with higher accuracy may also use throttle & break values in addition to the steering angles.
